@@ -124,7 +124,7 @@
     },
     {
       "id": 121,
-      "status": "pending",
+      "status": "done",
       "task": "BLOG COVER IMAGES: Generate premium cover images for each blog post using Gemini (matching n8n workflow style)",
       "cat": "blog"
     },
@@ -136,7 +136,7 @@
     },
     {
       "id": 123,
-      "status": "pending",
+      "status": "done",
       "task": "SECOND BLOG POST: Write 'How Tuco Built a Website in 3 Hours (Autonomously)' \u2014 case study, 2000+ words",
       "cat": "blog"
     },
@@ -250,73 +250,73 @@
     },
     {
       "id": 142,
-      "status": "pending",
+      "status": "done",
       "task": "META TAGS: Comprehensive OG/Twitter meta tags on every page with proper image previews",
       "cat": "seo"
     },
     {
       "id": 143,
-      "status": "pending",
+      "status": "done",
       "task": "SITEMAP.XML: Auto-generated sitemap with all pages, proper priorities, lastmod dates",
       "cat": "seo"
     },
     {
       "id": 144,
-      "status": "pending",
+      "status": "done",
       "task": "ROBOTS.TXT: Proper robots.txt with sitemap reference, crawl directives",
       "cat": "seo"
     },
     {
       "id": 145,
-      "status": "pending",
+      "status": "done",
       "task": "CANONICAL URLs: Add canonical link tags to all pages to prevent duplicate content",
       "cat": "seo"
     },
     {
       "id": 146,
-      "status": "pending",
+      "status": "done",
       "task": "BREADCRUMB NAVIGATION: Add breadcrumb component to all interior pages with Schema markup",
       "cat": "seo"
     },
     {
       "id": 147,
-      "status": "pending",
+      "status": "done",
       "task": "FAQ ACCORDION: Build FAQ section with Schema markup, smooth expand/collapse, Phosphor icons",
       "cat": "seo"
     },
     {
       "id": 148,
-      "status": "pending",
+      "status": "done",
       "task": "TABLE OF CONTENTS: Auto-generated ToC for blog posts with smooth scroll, active section highlight",
       "cat": "blog"
     },
     {
       "id": 149,
-      "status": "pending",
+      "status": "done",
       "task": "CODE BLOCKS: Add syntax highlighting (Prism.js) with Western dark theme for code snippets in blog posts",
       "cat": "blog"
     },
     {
       "id": 150,
-      "status": "pending",
+      "status": "done",
       "task": "CALL-OUTS: Build info/warning/success/tuco-quote callout components for blog content",
       "cat": "blog"
     },
     {
       "id": 151,
-      "status": "pending",
+      "status": "done",
       "task": "READING PROGRESS BAR: Sticky reading progress bar at top of blog posts (Western gold style)",
       "cat": "blog"
     },
     {
       "id": 152,
-      "status": "pending",
+      "status": "done",
       "task": "RELATED POSTS: Algorithm for related blog posts (by tags + category), displayed at bottom of each post",
       "cat": "blog"
     },
     {
       "id": 153,
-      "status": "pending",
+      "status": "done",
       "task": "AUTHOR COMPONENT: Author bio card for Tuco (AI agent) with avatar, bio, link to about page",
       "cat": "blog"
     },

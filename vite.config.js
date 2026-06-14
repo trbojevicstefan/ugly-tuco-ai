@@ -14,6 +14,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         arsenal: resolve(__dirname, 'arsenal.html'),
         'posts/manifesto': resolve(__dirname, 'posts/manifesto.html'),
+        'posts/built-in-3-hours': resolve(__dirname, 'posts/built-in-3-hours.html'),
       },
     },
   },
