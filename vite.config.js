@@ -15,6 +15,7 @@ export default defineConfig({
         arsenal: resolve(__dirname, 'arsenal.html'),
         'posts/manifesto': resolve(__dirname, 'posts/manifesto.html'),
         'posts/built-in-3-hours': resolve(__dirname, 'posts/built-in-3-hours.html'),
+        'posts/western-ui-grit': resolve(__dirname, 'posts/western-ui-grit.html'),
       },
     },
   },

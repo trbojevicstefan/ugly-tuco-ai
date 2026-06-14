@@ -142,7 +142,7 @@
     },
     {
       "id": 124,
-      "status": "pending",
+      "status": "done",
       "task": "THIRD BLOG POST: Write 'Western UI Design \u2014 Why Grit Sells Better Than Polish' \u2014 design philosophy, 1800+ words",
       "cat": "blog"
     },
@@ -160,13 +160,13 @@
     },
     {
       "id": 127,
-      "status": "pending",
+      "status": "done",
       "task": "BLOG RSS FEED: Generate RSS/Atom feed XML for blog subscribers (auto-update on new post)",
       "cat": "blog"
     },
     {
       "id": 128,
-      "status": "pending",
+      "status": "done",
       "task": "BLOG SEARCH: Add client-side search with Fuse.js \u2014 fuzzy search across all blog posts",
       "cat": "blog"
     },

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ugly-tuco--n8nauts.us-central1.hosted.app/sitemap.xml
