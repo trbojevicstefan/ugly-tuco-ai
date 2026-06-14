@@ -1,0 +1,9 @@
+{
+  "apphosting": [
+    {
+      "backendId": "ugly-tuco",
+      "root": ".",
+      "outputDirectory": "dist"
+    }
+  ]
+}
