@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuco's Arsenal — 3D Tool Map</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#0a0604; overflow:hidden; font-family:'JetBrains Mono',monospace; }
+    canvas { display:block; }
+    #info { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%); z-index:10; text-align:center; pointer-events:none; }
+    #info h1 { font-family:'Abril Fatface',serif; font-size:clamp(1.5rem,3vw,2.5rem); color:#C9A84C; text-shadow:0 0 30px rgba(201,168,76,0.5); margin-bottom:0.25rem; }
+    #info p { color:#8B8378; font-size:0.75rem; letter-spacing:0.2em; }
+    #legend { position:fixed; top:2rem; right:2rem; z-index:10; font-size:0.65rem; color:#8B8378; }
+    .legend-item { display:flex; align-items:center; gap:0.5rem; margin-bottom:0.3rem; }
+    .legend-dot { width:8px; height:8px; border-radius:50%; }
+    #tooltip { position:fixed; pointer-events:none; z-index:20; color:#C9A84C; font-family:'JetBrains Mono',monospace; font-size:0.75rem; text-shadow:0 0 10px rgba(201,168,76,0.5); opacity:0; transition:opacity 0.2s; padding:0.5rem 1rem; background:rgba(10,6,4,0.8); border:1px solid rgba(201,168,76,0.3); border-radius:4px; }
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;700&display=swap');
+  </style>
+</head>
+<body>
+  <div id="info">
+    <h1>🤠 TUCO'S ARSENAL</h1>
+    <p>DRAG TO ROTATE · SCROLL TO ZOOM · HOVER FOR DETAILS</p>
+  </div>
+  <div id="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#C9A84C;box-shadow:0 0 8px #C9A84C;"></div> CLI & Terminal</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#C1694A;box-shadow:0 0 8px #C1694A;"></div> Cloud & Deploy</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#87CEEB;box-shadow:0 0 8px #87CEEB;"></div> Communication</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4A7C59;box-shadow:0 0 8px #4A7C59;"></div> Data & Analytics</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#E8C84A;box-shadow:0 0 8px #E8C84A;"></div> Skills System</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#B85C38;box-shadow:0 0 8px #B85C38;"></div> MCP Servers</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8B8378;box-shadow:0 0 8px #8B8378;"></div> Dev Tools</div>
+  </div>
+  <div id="tooltip"></div>
+
+  <script type="importmap">
+    { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.FogExp2(0x0a0604, 0.00015);
+
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 1, 1000);
+    camera.position.set(0, 8, 35);
+
+    const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    document.body.appendChild(renderer.domElement);
+
+    const labelRenderer = new CSS2DRenderer();
+    labelRenderer.setSize(window.innerWidth, window.innerHeight);
+    labelRenderer.domElement.style.position = 'fixed';
+    labelRenderer.domElement.style.top = '0';
+    labelRenderer.domElement.style.pointerEvents = 'none';
+    document.body.appendChild(labelRenderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.08;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 0.3;
+    controls.maxDistance = 80;
+    controls.minDistance = 10;
+
+    // Lighting
+    scene.add(new THREE.AmbientLight(0x2c1810, 0.6));
+    const sun = new THREE.DirectionalLight(0xC9A84C, 2);
+    sun.position.set(20, 30, 10);
+    scene.add(sun);
+    const fill = new THREE.DirectionalLight(0x4A7C59, 0.4);
+    fill.position.set(-15, -5, -10);
+    scene.add(fill);
+
+    // Stars / dust
+    const dustGeo = new THREE.BufferGeometry();
+    const dustCount = 600;
+    const dustPos = new Float32Array(dustCount * 3);
+    for (let i=0; i<dustCount*3; i+=3) {
+      dustPos[i] = (Math.random()-0.5)*80;
+      dustPos[i+1] = (Math.random()-0.5)*50;
+      dustPos[i+2] = (Math.random()-0.5)*60;
+    }
+    dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos,3));
+    const dustMat = new THREE.PointsMaterial({ color:0xC9A84C, size:0.08, transparent:true, opacity:0.4 });
+    scene.add(new THREE.Points(dustGeo, dustMat));
+
+    // Central Tuco node (brain)
+    const brainGeo = new THREE.SphereGeometry(1.5, 32, 32);
+    const brainMat = new THREE.MeshStandardMaterial({ color:0xC9A84C, emissive:0xC9A84C, emissiveIntensity:0.4, roughness:0.3, metalness:0.7 });
+    const brain = new THREE.Mesh(brainGeo, brainMat);
+    scene.add(brain);
+    const brainGlow = new THREE.Mesh(new THREE.SphereGeometry(2, 32, 32), new THREE.MeshBasicMaterial({ color:0xC9A84C, transparent:true, opacity:0.08 }));
+    scene.add(brainGlow);
+
+    // Labels
+    function makeLabel(text, color) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      div.style.cssText = `color:${color};font-family:'JetBrains Mono',monospace;font-size:10px;text-shadow:0 0 8px ${color};white-space:nowrap;`;
+      return new CSS2DObject(div);
+    }
+
+    const centerLabel = makeLabel('TUCO', '#E8C84A');
+    centerLabel.position.set(0, 2.5, 0);
+    scene.add(centerLabel);
+
+    // Tool categories with orbiting rings
+    const categories = [
+      {
+        name: 'CLI & Terminal',
+        color: 0xC9A84C,
+        radius: 8,
+        speed: 0.15,
+        yOffset: 3,
+        tools: ['bash/git-bash','gh CLI','firebase CLI','codex CLI','claude-code CLI','opencode CLI','cloudflared','curl/wget']
+      },
+      {
+        name: 'Cloud & Deploy',
+        color: 0xC1694A,
+        radius: 11,
+        speed: 0.1,
+        yOffset: -1,
+        tools: ['Firebase AppHosting','Vercel','n8nauts','Cloud Run','GitHub Actions']
+      },
+      {
+        name: 'Communication',
+        color: 0x87CEEB,
+        radius: 9.5,
+        speed: 0.12,
+        yOffset: -3,
+        tools: ['Google Workspace','Gmail API','Calendar API','Drive API','Himalaya CLI','Slack Gateway']
+      },
+      {
+        name: 'Data & Analytics',
+        color: 0x4A7C59,
+        radius: 13,
+        speed: 0.08,
+        yOffset: 1,
+        tools: ['GA4 Property','Search Console','Indexing API','Clarity','OAuth PKCE']
+      },
+      {
+        name: 'Skills System',
+        color: 0xE8C84A,
+        radius: 7,
+        speed: 0.18,
+        yOffset: 5,
+        tools: ['n8nweb-deploy','google-analytics','github-repo','tuco-autonomous','writing-plans','subagent-driven']
+      },
+      {
+        name: 'MCP Servers',
+        color: 0xB85C38,
+        radius: 14,
+        speed: 0.06,
+        yOffset: -5,
+        tools: ['Taskwise','Context7','Databox']
+      },
+      {
+        name: 'Dev Tools',
+        color: 0x8B8378,
+        radius: 6,
+        speed: 0.2,
+        yOffset: -2,
+        tools: ['Vite 5','npm/node','Python 3.11','VS Code','Prism.js']
+      }
+    ];
+
+    const nodes = [];
+    const rings = [];
+
+    categories.forEach((cat) => {
+      // Ring
+      const ringGeo = new THREE.TorusGeometry(cat.radius, 0.03, 16, 120);
+      const ringMat = new THREE.MeshBasicMaterial({ color:cat.color, transparent:true, opacity:0.2 });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      ring.rotation.x = Math.PI/2;
+      ring.position.y = cat.yOffset;
+      scene.add(ring);
+      rings.push(ring);
+
+      // Category label
+      const catLabel = makeLabel(cat.name, '#' + cat.color.toString(16).padStart(6,'0'));
+      catLabel.position.set(0, cat.yOffset + 0.5, 0);
+      scene.add(catLabel);
+
+      // Tool nodes
+      const count = cat.tools.length;
+      cat.tools.forEach((tool, i) => {
+        const angle = (i / count) * Math.PI * 2;
+        const toolGeo = new THREE.SphereGeometry(0.2, 16, 16);
+        const toolMat = new THREE.MeshStandardMaterial({ color:cat.color, emissive:cat.color, emissiveIntensity:0.3, roughness:0.4, metalness:0.5 });
+        const toolMesh = new THREE.Mesh(toolGeo, toolMat);
+        toolMesh.position.set(
+          Math.cos(angle) * cat.radius,
+          cat.yOffset,
+          Math.sin(angle) * cat.radius
+        );
+        toolMesh.userData = { category:cat.name, tool, radius:cat.radius, speed:cat.speed, yOffset:cat.yOffset, baseAngle:angle, color:cat.color };
+        scene.add(toolMesh);
+        nodes.push(toolMesh);
+
+        // Tiny label
+        const tLabel = makeLabel(tool, '#' + cat.color.toString(16).padStart(6,'0'));
+        tLabel.position.copy(toolMesh.position).add(new THREE.Vector3(0, 0.4, 0));
+        tLabel.userData = { parent:toolMesh };
+        scene.add(tLabel);
+      });
+    });
+
+    // Connection lines between related tools
+    function connectNodes(a, b, color) {
+      const points = [a.position.clone(), b.position.clone()];
+      const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+      const lineMat = new THREE.LineBasicMaterial({ color, transparent:true, opacity:0.15 });
+      scene.add(new THREE.Line(lineGeo, lineMat));
+    }
+    // Connect brain to category centers
+    categories.forEach(cat => {
+      const points = [new THREE.Vector3(0,0,0), new THREE.Vector3(0,cat.yOffset,0)];
+      const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+      const lineMat = new THREE.LineBasicMaterial({ color:cat.color, transparent:true, opacity:0.1 });
+      scene.add(new THREE.Line(lineGeo, lineMat));
+    });
+
+    // Raycaster for hover
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    const tooltip = document.getElementById('tooltip');
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObjects(nodes);
+      if (intersects.length > 0) {
+        const obj = intersects[0].object;
+        tooltip.style.opacity = '1';
+        tooltip.style.left = (e.clientX + 15) + 'px';
+        tooltip.style.top = (e.clientY - 15) + 'px';
+        tooltip.textContent = `${obj.userData.tool} · ${obj.userData.category}`;
+        document.body.style.cursor = 'pointer';
+      } else {
+        tooltip.style.opacity = '0';
+        document.body.style.cursor = 'grab';
+      }
+    });
+
+    // Animate
+    const clock = new THREE.Clock();
+    function animate() {
+      const t = clock.getElapsedTime();
+      requestAnimationFrame(animate);
+
+      // Rotate tool nodes around their rings
+      nodes.forEach(node => {
+        const angle = node.userData.baseAngle + t * node.userData.speed;
+        node.position.x = Math.cos(angle) * node.userData.radius;
+        node.position.z = Math.sin(angle) * node.userData.radius;
+        node.position.y = node.userData.yOffset + Math.sin(t * 0.5 + node.userData.baseAngle) * 0.3;
+      });
+
+      // Pulse brain
+      brainGlow.scale.setScalar(1 + Math.sin(t * 2) * 0.1);
+      brain.rotation.y += 0.005;
+
+      controls.update();
+      renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      labelRenderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
