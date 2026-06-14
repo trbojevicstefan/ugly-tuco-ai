@@ -1055,41 +1055,141 @@ a:hover {
 
 /* ── Leather Cover Background ── */
 .journal-cover {
+  text-align: center;
   background: 
-    radial-gradient(ellipse at 50% 30%, rgba(139, 58, 26, 0.15) 0%, transparent 60%),
-    linear-gradient(180deg, var(--dirt-deep) 0%, var(--dirt-warm) 40%, var(--bg-card) 70%, var(--dirt-deep) 100%);
-  border: 3px double var(--border-gold);
-  padding: 2rem;
+    linear-gradient(
+      180deg, 
+      var(--dirt-deep) 0%, 
+      #3A1A0A 15%, 
+      var(--dirt-warm) 35%, 
+      #4A2D1A 55%, 
+      var(--bg-card) 70%, 
+      var(--dirt-deep) 100%
+    );
+  border: 8px solid;
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--border-color) 0px,
+    var(--border-color) 1px,
+    var(--dirt-warm) 1px,
+    var(--dirt-warm) 3px
+  ) 8;
+  padding: 3rem 2rem 2rem;
   margin-bottom: 4rem;
   position: relative;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  border-radius: 3px 6px 6px 3px;
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.5),
+    inset 0 1px 3px rgba(255,255,255,0.03),
+    inset 0 -1px 3px rgba(0,0,0,0.2);
+  border-radius: 4px 8px 8px 4px;
+  overflow: hidden;
+}
+
+/* Leather grain texture overlay */
+.journal-cover::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.45 0.35' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)' opacity='0.18'/%3E%3C/svg%3E");
+  background-size: cover;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 2px 4px 4px 2px;
+}
+
+/* Faux leather stitching around cover */
+.journal-cover::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(201,168,76,0.15);
+  border-radius: 2px 4px 4px 2px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Gold foil stamp on cover */
 .journal-cover-stamp {
   text-align: center;
   font-family: var(--font-display);
-  font-size: 2rem;
-  color: var(--gold);
-  text-shadow: 0 0 10px rgba(201,168,76,0.4), 0 2px 4px rgba(0,0,0,0.6);
-  letter-spacing: 0.3em;
-  padding: 1.5rem;
-  border: 2px solid var(--gold);
+  font-size: 2.4rem;
+  letter-spacing: 0.35em;
+  padding: 2rem 1.5rem;
   display: inline-block;
   position: relative;
+  z-index: 2;
+  /* Gold foil shimmer via text-gold-foil class */
+  background: linear-gradient(
+    135deg,
+    #7A5C1E 0%,
+    var(--gold) 15%,
+    var(--gold-bright) 30%,
+    #F5E6A0 45%,
+    var(--gold) 60%,
+    #7A5C1E 80%,
+    var(--gold) 100%
+  );
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 5s linear infinite;
+  /* Embossed stamp border */
+  border: 3px solid;
+  border-image: linear-gradient(
+    135deg,
+    rgba(201,168,76,0.8),
+    rgba(232,200,74,0.4),
+    rgba(155,122,42,0.9),
+    rgba(201,168,76,0.5)
+  ) 3;
+  /* Embossed depth — light on top-left, dark on bottom-right */
+  box-shadow:
+    inset 2px 2px 4px rgba(0,0,0,0.5),
+    inset -2px -2px 4px rgba(255,255,255,0.05),
+    0 4px 12px rgba(0,0,0,0.4);
+  text-shadow: none;
 }
 
 .journal-cover-stamp::before,
 .journal-cover-stamp::after {
   content: '★';
   position: absolute;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--gold);
+  text-shadow: 0 0 6px rgba(201,168,76,0.5);
+  -webkit-text-fill-color: var(--gold);
+  z-index: 3;
 }
 
-.journal-cover-stamp::before { top: -8px; left: 50%; transform: translateX(-50%); }
-.journal-cover-stamp::after  { bottom: -8px; left: 50%; transform: translateX(-50%); }
+.journal-cover-stamp::before { top: -9px; left: 50%; transform: translateX(-50%); }
+.journal-cover-stamp::after  { bottom: -9px; left: 50%; transform: translateX(-50%); }
+
+/* Leather corner rivets */
+.journal-cover .corner-rivet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    var(--gold-bright) 0%,
+    var(--gold) 30%,
+    var(--gold-dark) 60%,
+    var(--dirt-deep) 100%
+  );
+  box-shadow: 
+    0 1px 3px rgba(0,0,0,0.5),
+    inset 0 1px 2px rgba(255,255,255,0.15);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.journal-cover .corner-rivet.tl { top: 6px; left: 10px; }
+.journal-cover .corner-rivet.tr { top: 6px; right: 10px; }
+.journal-cover .corner-rivet.bl { bottom: 6px; left: 10px; }
+.journal-cover .corner-rivet.br { bottom: 6px; right: 10px; }
 
 /* ── Animated Tumbleweed ── */
 .tumbleweed {
