@@ -723,6 +723,18 @@ a:hover {
     display: none;
   }
 
+  .nav-saloon {
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-saloon .nav-inner {
+    gap: 0.5rem;
+  }
+
+  .nav-saloon .nav-brand {
+    font-size: 1.1rem;
+  }
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -1804,23 +1816,37 @@ a:hover {
 /* ── Day/Night Mode Toggle ── */
 .mode-toggle {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   z-index: 200;
   background: var(--bg-card);
-  border: 1px solid var(--border-gold);
+  border: 2px solid var(--border-gold);
   color: var(--gold);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  letter-spacing: 0.1em;
 }
 
 .mode-toggle:hover {
   background: var(--gold);
   color: var(--dirt-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(201,168,76,0.3);
+}
+
+@media (max-width: 768px) {
+  .mode-toggle {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 3rem));
+    right: 1rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+    border-radius: 50px;
+  }
 }
 
 /* Dusk Mode */
