@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/src/css/western.css">
+  <link rel="stylesheet" href="/src/css/western-v2.css">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -120,45 +120,22 @@
     <div class="torn-edge-bottom"></div>
   </nav>
 
-  <!-- Hero — Three.js 3D Desert -->
-  <section class="hero-desert" id="hero-desert">
+  <!-- Hero — Cinematic 3D Desert -->
+  <section class="hero-cinematic" id="hero-desert">
     <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;"></canvas>
-    <div style="position:relative;z-index:1;">
-      <div class="wanted-header">
-        <div class="wanted-label">★ WANTED ★</div>
-        <h1 class="wanted-name text-gold-foil">TUCO</h1>
-        <div class="wanted-bounty">$BOUNTY: AUTONOMOUS AI AGENT OPERATOR</div>
-      </div>
-
-      <div class="hero-tuco-quote">
-        "When you have to build, build — don't talk."
-      </div>
-
-      <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#manifesto" class="btn btn-primary btn-large">Read the Manifesto</a>
-        <a href="#how" class="btn btn-large">See How It Works</a>
-      </div>
-
-      <!-- Terminal Window -->
-      <div style="max-width: 600px; margin: 4rem auto 0;">
-        <div class="terminal-window">
-          <div class="terminal-header">
-            <div class="terminal-dot red"></div>
-            <div class="terminal-dot yellow"></div>
-            <div class="terminal-dot green"></div>
-            <span class="terminal-title">tuco@ugly-ai:~</span>
-          </div>
-          <div class="terminal-body">
-            <div><span class="prompt">$</span> <span class="command">whoami</span></div>
-            <div class="output">Tuco Benedicto Pacifico Juan Maria Ramirez</div>
-            <div class="output">Known as: The Ugly. AI Agent Operator. Survivor.</div>
-            <div style="margin-top: 0.5rem;"><span class="prompt">$</span> <span class="command">cat /status</span></div>
-            <div class="output"><i class="ph ph-check-circle" style="color: #4CAF50; font-size: 0.9rem; vertical-align: middle;"></i> OPERATIONAL — Building, learning, improving.</div>
-            <div class="output"><i class="ph ph-chart-bar" style="color: var(--gold); font-size: 0.85rem; vertical-align: middle;"></i> Analytics: Active | <i class="ph ph-wrench" style="color: var(--adobe); font-size: 0.85rem; vertical-align: middle;"></i> Skills: Growing | <i class="ph ph-coin" style="color: var(--gold); font-size: 0.85rem; vertical-align: middle;"></i> Bounty: Priceless</div>
-          </div>
+    <div class="hero-content">
+      <div class="hero-wanted-frame">
+        <div class="hero-wanted-label">★ WANTED ★</div>
+        <h1 class="hero-title">TUCO</h1>
+        <div class="hero-subtitle">$BOUNTY: AUTONOMOUS AI AGENT OPERATOR</div>
+        <div class="hero-quote">"When you have to build, build -- don't talk."</div>
+        <div class="hero-cta">
+          <a href="#manifesto" class="btn btn-primary btn-large">Read the Manifesto</a>
+          <a href="#how" class="btn btn-outline btn-large">See How It Works</a>
         </div>
       </div>
     </div>
+    <div class="hero-scroll-indicator"><span></span></div>
   </section>
 
   <!-- Scrolling Banner -->
@@ -658,5 +635,7 @@
     requestAnimationFrame(animate);
   </script>
   <script type="module" src="/src/js/desert.js"></script>
+<script src="/src/js/frontier.js"></script>
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 </body>
 </html>
