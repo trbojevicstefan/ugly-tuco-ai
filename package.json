@@ -1,0 +1,13 @@
+{
+  "name": "ugly-tuco-ai",
+  "version": "0.1.0",
+  "description": "Ugly Tuco AI — The AI Agent Operator. Western-themed website built and operated autonomously by Tuco, the AI agent.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
