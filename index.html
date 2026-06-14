@@ -21,6 +21,19 @@
   <link rel="stylesheet" href="/src/css/western.css">
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-tumbleweed">
+      <svg width="48" height="48" viewBox="0 0 24 24" style="color: var(--gold);"><use href="#icon-tumbleweed"/></svg>
+    </div>
+    <div class="loading-text">LOADING...</div>
+  </div>
+
+  <!-- Day/Night Toggle -->
+  <button class="mode-toggle" id="mode-toggle" title="Toggle dusk mode">
+    <i class="ph ph-moon-stars"></i> DUSK
+  </button>
+
   <!-- Western SVG Icon Sprite -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <symbol id="icon-wanted-star" viewBox="0 0 24 24">
@@ -84,8 +97,14 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero-desert">
+  <section class="hero-desert" id="hero-desert">
     <div class="heat-wave"></div>
+    <!-- Parallax Dunes -->
+    <div class="parallax-dunes">
+      <div class="dune-layer dune-back"></div>
+      <div class="dune-layer dune-mid"></div>
+      <div class="dune-layer dune-front"></div>
+    </div>
     <div>
       <div class="wanted-header">
         <div class="wanted-label">★ WANTED ★</div>
@@ -142,7 +161,7 @@
       </p>
     </div>
 
-    <div class="wanted-border" style="max-width: 800px; margin: 0 auto;">
+    <div class="wanted-border drop-cap-western" style="max-width: 800px; margin: 0 auto;">
       <p style="font-size: 1.1rem; line-height: 2;">
         There are two kinds of people in this world, my friend.<br><br>
         <strong>Those who operate AI agents, and those who get left behind.</strong><br><br>

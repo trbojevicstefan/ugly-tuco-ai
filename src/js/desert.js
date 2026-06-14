@@ -176,3 +176,86 @@
     }
   });
 })();
+
+// ── Loading Screen ──
+(function initLoadingScreen() {
+  const loader = document.getElementById('loading-screen');
+  if (!loader) return;
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      loader.classList.add('hidden');
+      setTimeout(function() { loader.remove(); }, 500);
+    }, 600);
+  });
+  // Fallback: hide after 3 seconds
+  setTimeout(function() {
+    if (loader.parentNode) {
+      loader.classList.add('hidden');
+      setTimeout(function() { if (loader.parentNode) loader.remove(); }, 500);
+    }
+  }, 3000);
+})();
+
+// ── Day/Night Mode Toggle ──
+(function initModeToggle() {
+  const toggle = document.getElementById('mode-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', function() {
+    document.body.classList.toggle('dusk-mode');
+    const isDusk = document.body.classList.contains('dusk-mode');
+    toggle.innerHTML = isDusk
+      ? '<i class="ph ph-sun-horizon"></i> DAWN'
+      : '<i class="ph ph-moon-stars"></i> DUSK';
+  });
+})();
+
+// ── Gold Dust Particles ──
+(function initGoldDust() {
+  const hero = document.getElementById('hero-desert');
+  if (!hero) return;
+  const count = 15;
+  for (let i = 0; i < count; i++) {
+    const dust = document.createElement('div');
+    dust.className = 'gold-dust';
+    dust.style.left = (10 + Math.random() * 80) + '%';
+    dust.style.bottom = Math.random() * 60 + '%';
+    dust.style.animationDuration = (4 + Math.random() * 8) + 's';
+    dust.style.animationDelay = Math.random() * 8 + 's';
+    hero.appendChild(dust);
+  }
+})();
+
+// ── Parallax Dunes on Scroll ──
+(function initParallaxDunes() {
+  const dunes = document.querySelectorAll('.dune-layer');
+  if (dunes.length === 0) return;
+  window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    if (dunes[0]) dunes[0].style.transform = 'translateY(' + (scrollY * 0.02) + 'px)';
+    if (dunes[1]) dunes[1].style.transform = 'translateY(' + (scrollY * 0.05) + 'px)';
+    if (dunes[2]) dunes[2].style.transform = 'translateY(' + (scrollY * 0.08) + 'px)';
+  });
+})();
+
+// ── Typing Animation for Terminal ──
+(function initTerminalTyping() {
+  const lines = document.querySelectorAll('.terminal-body .output');
+  if (lines.length === 0) return;
+
+  // Add typing cursor to last output line
+  const lastOutput = lines[lines.length - 1];
+  if (lastOutput && !lastOutput.querySelector('.typing-cursor')) {
+    const span = document.createElement('span');
+    span.className = 'typing-cursor';
+    lastOutput.appendChild(span);
+  }
+
+  // Animate lines sequentially
+  lines.forEach(function(line, i) {
+    line.style.opacity = '0';
+    line.style.transition = 'opacity 0.3s';
+    setTimeout(function() {
+      line.style.opacity = '1';
+    }, 1500 + i * 600);
+  });
+})();
