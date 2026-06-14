@@ -1,0 +1,306 @@
+{
+  "name": "Ugly Tuco AI \u2014 Premium Design Sprint",
+  "total": 50,
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Replace all emojis with Phosphor Icons CDN + custom inline SVG icons (hat, revolver, spur, cactus, skull, star, rope)",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "task": "Create custom SVG icon sprite for Western elements: wanted-star, bullet, horseshoe, tumbleweed, campfire",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "task": "Build premium SVG brand logo: Tuco silhouette with hat + 'UGLY TUCO AI' wordmark in Western typography",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "task": "Replace nav brand emoji with SVG hat icon, add subtle hat-tip animation on hover",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 5,
+      "task": "Replace all section/step emojis (\ud83d\udd2b\ud83d\udcb0\ud83c\udfdc\ufe0f) with custom SVG icons styled in gold/desert theme",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 6,
+      "task": "Replace skill card emojis (\ud83d\udcca\ud83d\udd0d\ud83d\ude80\ud83e\udde0\ud83d\udcdd\ud83d\udd04) with premium Phosphor icons",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 7,
+      "task": "Add custom SVG 'WANTED' stamp/badge component with distressed texture",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 8,
+      "task": "Create animated SVG tumbleweed that rolls across hero section",
+      "cat": "anim",
+      "status": "done"
+    },
+    {
+      "id": 9,
+      "task": "Add SVG cactus silhouettes as decorative elements in section backgrounds",
+      "cat": "icons",
+      "status": "done"
+    },
+    {
+      "id": 10,
+      "task": "Create animated SVG bullet-hole effect on card hover (subtle crack/impact)",
+      "cat": "anim",
+      "status": "done"
+    },
+    {
+      "id": 11,
+      "task": "Build 3D page-turning journal: CSS perspective, page flip animation, shadow depth",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 12,
+      "task": "Add journal cover design: leather-textured CSS background, gold foil stamp '100 DAYS'",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 13,
+      "task": "Journal page curl effect on hover with realistic shadow gradient",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 14,
+      "task": "Add journal spine and page-stack visual (multiple page edges visible from side)",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 15,
+      "task": "Journal entry staggered fade-in with page-turn transition between entries",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 16,
+      "task": "Add 'handwritten' CSS font effect for journal dates (rough, ink-style)",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 17,
+      "task": "Journal progress indicator: leather bookmark ribbon that moves down as days progress",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 18,
+      "task": "Add ink splatter/coffee stain decorative elements on journal pages",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 19,
+      "task": "Journal page texture: subtle paper grain SVG overlay on entry backgrounds",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 20,
+      "task": "Build journal navigation: prev/next arrows styled as Western playing-card symbols",
+      "cat": "journal",
+      "status": "pending"
+    },
+    {
+      "id": 21,
+      "task": "Hero section: desert parallax background with layered sand dunes (CSS layers)",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 22,
+      "task": "Hero: animated sunset gradient sky that shifts colors on scroll",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 23,
+      "task": "Hero: add heat-wave distortion effect (CSS filter + SVG turbulence)",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 24,
+      "task": "Hero: gold particles floating upward like desert dust catching sunlight",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 25,
+      "task": "Hero terminal window: typing animation effect with blinking cursor",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 26,
+      "task": "Hero: bullet-riddled WANTED sign animation (holes appear one by one)",
+      "cat": "hero",
+      "status": "pending"
+    },
+    {
+      "id": 27,
+      "task": "Navigation: glass-morph saloon bar with backdrop-blur + subtle wood grain texture",
+      "cat": "nav",
+      "status": "pending"
+    },
+    {
+      "id": 28,
+      "task": "Navigation: swinging saloon-door divider animation on menu toggle",
+      "cat": "nav",
+      "status": "pending"
+    },
+    {
+      "id": 29,
+      "task": "Navigation: active section indicator like a bullet-hole marker",
+      "cat": "nav",
+      "status": "pending"
+    },
+    {
+      "id": 30,
+      "task": "Mobile: slide-out wanted-poster menu with torn-paper edge",
+      "cat": "nav",
+      "status": "pending"
+    },
+    {
+      "id": 31,
+      "task": "Cards: premium hover \u2014 gold border glint animation, subtle scale, depth shadow",
+      "cat": "cards",
+      "status": "pending"
+    },
+    {
+      "id": 32,
+      "task": "Cards: alternate card styles \u2014 'wanted poster', 'playing card', 'leather notebook' variants",
+      "cat": "cards",
+      "status": "pending"
+    },
+    {
+      "id": 33,
+      "task": "Cards: reveal animation \u2014 fade up + gold dust sparkle on scroll-into-view",
+      "cat": "cards",
+      "status": "pending"
+    },
+    {
+      "id": 34,
+      "task": "Add rope/chain decorative dividers between sections (SVG rope pattern)",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 35,
+      "task": "Custom scrollbar: Western-themed (gold thumb, dark track, rope texture)",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 36,
+      "task": "Cursor: custom Western crosshair cursor (iron sights style) on interactive elements",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 37,
+      "task": "Add wanted-poster tacks/pins in corners of bordered elements (animated push-in)",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 38,
+      "task": "Footer: add Tuco silhouette walking into sunset animation",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 39,
+      "task": "Loading screen: tumbleweed rolling across desert with 'Loading...' in wanted-poster text",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 40,
+      "task": "404 page: 'WANTED: This Page' dead-or-alive poster with Tuco joke",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 41,
+      "task": "Typography system: add Western display font for headings (matching wanted-poster aesthetic)",
+      "cat": "type",
+      "status": "pending"
+    },
+    {
+      "id": 42,
+      "task": "Add gold-foil text effect CSS for key headings (gradient + shimmer animation)",
+      "cat": "type",
+      "status": "pending"
+    },
+    {
+      "id": 43,
+      "task": "Drop-cap Western style on manifesto paragraph (large ornate first letter)",
+      "cat": "type",
+      "status": "pending"
+    },
+    {
+      "id": 44,
+      "task": "Add distressed/weathered text effect for 'UGLY' wordmark (CSS text-shadow layers)",
+      "cat": "type",
+      "status": "pending"
+    },
+    {
+      "id": 45,
+      "task": "Numbers/monospace: add Western saloon-number style for dates and stats",
+      "cat": "type",
+      "status": "pending"
+    },
+    {
+      "id": 46,
+      "task": "Audio Easter egg: optional ambient desert sounds toggle (wind, distant coyote)",
+      "cat": "easter",
+      "status": "pending"
+    },
+    {
+      "id": 47,
+      "task": "Konami code upgrade: typing 'tuco' triggers wanted-poster fly-in with random bounty quote",
+      "cat": "easter",
+      "status": "pending"
+    },
+    {
+      "id": 48,
+      "task": "Hidden 'whiskey bottle' clickable element that toasts 'To Blondie!' in gold sparkles",
+      "cat": "easter",
+      "status": "pending"
+    },
+    {
+      "id": 49,
+      "task": "Day/night desert mode toggle (dusk mode with darker sky, stars, campfire glow)",
+      "cat": "details",
+      "status": "pending"
+    },
+    {
+      "id": 50,
+      "task": "Final polish pass: consistent spacing, responsive fixes, 4K retina assets, print stylesheet",
+      "cat": "polish",
+      "status": "pending"
+    }
+  ]
+}
