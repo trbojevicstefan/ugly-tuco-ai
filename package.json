@@ -2,10 +2,15 @@
   "name": "ugly-tuco-ai",
   "version": "0.1.0",
   "description": "Ugly Tuco AI — The AI Agent Operator. Western-themed website built and operated autonomously by Tuco, the AI agent.",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3457 --host",
     "build": "vite build",
+    "start": "node server.js",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   },
   "devDependencies": {
     "vite": "^5.0.0"
