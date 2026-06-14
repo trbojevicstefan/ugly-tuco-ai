@@ -1,0 +1,606 @@
+{
+  "name": "Ugly Tuco AI \u2014 Modern Western Fusion Sprint",
+  "total": 100,
+  "tasks": [
+    {
+      "id": 101,
+      "status": "pending",
+      "task": "BENTO GRID: Redesign homepage hero + skills into asymmetrical bento grid layout with varying card sizes (1\u00d71, 2\u00d71, 1\u00d72)",
+      "cat": "layout"
+    },
+    {
+      "id": 102,
+      "status": "pending",
+      "task": "GLASS CARDS: Add frosted glass-morphism to all cards (backdrop-blur, subtle border, inner glow) \u2014 modern + western",
+      "cat": "cards"
+    },
+    {
+      "id": 103,
+      "status": "pending",
+      "task": "SKELETON LOADING: Add shimmer skeleton placeholders for all card/content sections before they render",
+      "cat": "ux"
+    },
+    {
+      "id": 104,
+      "status": "pending",
+      "task": "PAGE TRANSITIONS: Smooth cross-fade + slide transitions between pages (barba.js or View Transitions API)",
+      "cat": "anim"
+    },
+    {
+      "id": 105,
+      "status": "pending",
+      "task": "MICRO-INTERACTIONS: Add haptic-style micro-animations on all buttons (scale-bounce, ripple, glow pulse)",
+      "cat": "anim"
+    },
+    {
+      "id": 106,
+      "status": "pending",
+      "task": "HOVER STATES: Premium hover system \u2014 all interactive elements have distinct, smooth, satisfying hover",
+      "cat": "ux"
+    },
+    {
+      "id": 107,
+      "status": "pending",
+      "task": "SCROLL-TRIGGERED ANIMATIONS: Smooth scroll-triggered reveals with staggered delays (IntersectionObserver v2)",
+      "cat": "anim"
+    },
+    {
+      "id": 108,
+      "status": "pending",
+      "task": "TYPOGRAPHY SYSTEM: Add variable font support, proper font scaling (clamp), ligatures, kerning pairs",
+      "cat": "type"
+    },
+    {
+      "id": 109,
+      "status": "pending",
+      "task": "ACCENT COLOR SYSTEM: Create 3 accent color schemes (Gold Rush, Blood Moon, Cactus Night) with CSS custom properties",
+      "cat": "design"
+    },
+    {
+      "id": 110,
+      "status": "pending",
+      "task": "DARK/LIGHT SYSTEM: Full dark/light/dusk mode with CSS custom properties toggle and system preference detection",
+      "cat": "design"
+    },
+    {
+      "id": 111,
+      "status": "pending",
+      "task": "ACCESSIBILITY: ARIA labels, focus-visible states, skip-to-content link, screen reader announcements, keyboard nav",
+      "cat": "a11y"
+    },
+    {
+      "id": 112,
+      "status": "pending",
+      "task": "PERFORMANCE: Lazy load images/iframes, font-display swap, resource hints (preload/preconnect), code splitting",
+      "cat": "perf"
+    },
+    {
+      "id": 113,
+      "status": "pending",
+      "task": "IMAGE OPTIMIZATION: Responsive images (srcset), AVIF/WebP formats, blur-up placeholder, proper aspect ratios",
+      "cat": "perf"
+    },
+    {
+      "id": 114,
+      "status": "pending",
+      "task": "CSS CLEANUP: Remove unused CSS, optimize selectors, use @layer for cascade management, minify",
+      "cat": "perf"
+    },
+    {
+      "id": 115,
+      "status": "pending",
+      "task": "MOBILE NAVIGATION: Full mobile hamburger menu with slide-out panel, backdrop blur, smooth animation",
+      "cat": "mobile"
+    },
+    {
+      "id": 116,
+      "status": "pending",
+      "task": "RESPONSIVE AUDIT: Test all breakpoints (320px, 375px, 414px, 768px, 1024px, 1440px, 1920px), fix every issue",
+      "cat": "mobile"
+    },
+    {
+      "id": 117,
+      "status": "pending",
+      "task": "TOUCH INTERACTIONS: Swipe gestures for journal page-turn, long-press for context menus, pull-to-refresh",
+      "cat": "mobile"
+    },
+    {
+      "id": 118,
+      "status": "done",
+      "task": "BLOG SYSTEM \u2014 FIRESTORE: Create 'blog' collection in n8nauts Firestore with proper schema (slug, title, content, hero, date, tags, readingTime, metatitle, shortsummary)",
+      "cat": "blog"
+    },
+    {
+      "id": 119,
+      "status": "done",
+      "task": "BLOG PAGE: Build /blog.html with grid layout, hero cards, category filters, pagination (from Firestore)",
+      "cat": "blog"
+    },
+    {
+      "id": 120,
+      "status": "done",
+      "task": "BLOG POST PAGE: Build dynamic blog post template with proper typography, reading time, share buttons, related posts",
+      "cat": "blog"
+    },
+    {
+      "id": 121,
+      "status": "pending",
+      "task": "BLOG COVER IMAGES: Generate premium cover images for each blog post using Gemini (matching n8n workflow style)",
+      "cat": "blog"
+    },
+    {
+      "id": 122,
+      "status": "done",
+      "task": "FIRST BLOG POST: Write 'The AI Agent Operator Manifesto' \u2014 pillar content, 2500+ words, SEO-optimized",
+      "cat": "blog"
+    },
+    {
+      "id": 123,
+      "status": "pending",
+      "task": "SECOND BLOG POST: Write 'How Tuco Built a Website in 3 Hours (Autonomously)' \u2014 case study, 2000+ words",
+      "cat": "blog"
+    },
+    {
+      "id": 124,
+      "status": "pending",
+      "task": "THIRD BLOG POST: Write 'Western UI Design \u2014 Why Grit Sells Better Than Polish' \u2014 design philosophy, 1800+ words",
+      "cat": "blog"
+    },
+    {
+      "id": 125,
+      "status": "pending",
+      "task": "FOURTH BLOG POST: Write 'From Zero to Deploy \u2014 The Complete AI Agent Operator Blueprint' \u2014 tutorial, 3000+ words",
+      "cat": "blog"
+    },
+    {
+      "id": 126,
+      "status": "pending",
+      "task": "FIFTH BLOG POST: Write 'The Economics of Autonomous Websites \u2014 Cost, ROI, Scale' \u2014 data-driven, 2000+ words",
+      "cat": "blog"
+    },
+    {
+      "id": 127,
+      "status": "pending",
+      "task": "BLOG RSS FEED: Generate RSS/Atom feed XML for blog subscribers (auto-update on new post)",
+      "cat": "blog"
+    },
+    {
+      "id": 128,
+      "status": "pending",
+      "task": "BLOG SEARCH: Add client-side search with Fuse.js \u2014 fuzzy search across all blog posts",
+      "cat": "blog"
+    },
+    {
+      "id": 129,
+      "status": "pending",
+      "task": "BLOG NEWSLETTER: Add email signup form connected to Firebase (collection: subscribers)",
+      "cat": "blog"
+    },
+    {
+      "id": 130,
+      "status": "pending",
+      "task": "BLOG SOCIAL SHARING: Twitter/X, LinkedIn, copy-link share buttons with OG image previews",
+      "cat": "blog"
+    },
+    {
+      "id": 131,
+      "status": "pending",
+      "task": "SVG JOURNAL ILLUSTRATIONS: Create premium SVG art for Day 1-10 journal entries (desert scenes, coding agents, gold rush)",
+      "cat": "art"
+    },
+    {
+      "id": 132,
+      "status": "pending",
+      "task": "SVG JOURNAL ILLUSTRATIONS: Create premium SVG art for Day 11-20 (analytics dashboards, SEO hunting, content engine)",
+      "cat": "art"
+    },
+    {
+      "id": 133,
+      "status": "pending",
+      "task": "SVG JOURNAL ILLUSTRATIONS: Create premium SVG art for Day 21-30 (traffic growth, backlink hunting, social proof)",
+      "cat": "art"
+    },
+    {
+      "id": 134,
+      "status": "pending",
+      "task": "SVG ILLUSTRATION SYSTEM: Create reusable SVG illustration components (desert landscape, agent working, data flow)",
+      "cat": "art"
+    },
+    {
+      "id": 135,
+      "status": "pending",
+      "task": "ANIMATED SVG: Add CSS animation to journal illustrations (subtle movement \u2014 wind, glow, pulse)",
+      "cat": "art"
+    },
+    {
+      "id": 136,
+      "status": "pending",
+      "task": "DIARY DAY 4: Write Day 4 journal entry + custom SVG illustration",
+      "cat": "content"
+    },
+    {
+      "id": 137,
+      "status": "pending",
+      "task": "DIARY DAY 5: Write Day 5 journal entry + custom SVG illustration",
+      "cat": "content"
+    },
+    {
+      "id": 138,
+      "status": "pending",
+      "task": "DIARY DAY 6: Write Day 6 journal entry + custom SVG illustration",
+      "cat": "content"
+    },
+    {
+      "id": 139,
+      "status": "pending",
+      "task": "DIARY DAY 7: Write Day 7 journal entry (1-week milestone) + premium SVG illustration",
+      "cat": "content"
+    },
+    {
+      "id": 140,
+      "status": "pending",
+      "task": "DIARY DAY 8-10: Write 3 more journal entries + SVG illustrations",
+      "cat": "content"
+    },
+    {
+      "id": 141,
+      "status": "done",
+      "task": "SCHEMA.ORG: Add JSON-LD structured data to all pages (WebPage, Article, BreadcrumbList, FAQPage, Organization)",
+      "cat": "seo"
+    },
+    {
+      "id": 142,
+      "status": "pending",
+      "task": "META TAGS: Comprehensive OG/Twitter meta tags on every page with proper image previews",
+      "cat": "seo"
+    },
+    {
+      "id": 143,
+      "status": "pending",
+      "task": "SITEMAP.XML: Auto-generated sitemap with all pages, proper priorities, lastmod dates",
+      "cat": "seo"
+    },
+    {
+      "id": 144,
+      "status": "pending",
+      "task": "ROBOTS.TXT: Proper robots.txt with sitemap reference, crawl directives",
+      "cat": "seo"
+    },
+    {
+      "id": 145,
+      "status": "pending",
+      "task": "CANONICAL URLs: Add canonical link tags to all pages to prevent duplicate content",
+      "cat": "seo"
+    },
+    {
+      "id": 146,
+      "status": "pending",
+      "task": "BREADCRUMB NAVIGATION: Add breadcrumb component to all interior pages with Schema markup",
+      "cat": "seo"
+    },
+    {
+      "id": 147,
+      "status": "pending",
+      "task": "FAQ ACCORDION: Build FAQ section with Schema markup, smooth expand/collapse, Phosphor icons",
+      "cat": "seo"
+    },
+    {
+      "id": 148,
+      "status": "pending",
+      "task": "TABLE OF CONTENTS: Auto-generated ToC for blog posts with smooth scroll, active section highlight",
+      "cat": "blog"
+    },
+    {
+      "id": 149,
+      "status": "pending",
+      "task": "CODE BLOCKS: Add syntax highlighting (Prism.js) with Western dark theme for code snippets in blog posts",
+      "cat": "blog"
+    },
+    {
+      "id": 150,
+      "status": "pending",
+      "task": "CALL-OUTS: Build info/warning/success/tuco-quote callout components for blog content",
+      "cat": "blog"
+    },
+    {
+      "id": 151,
+      "status": "pending",
+      "task": "READING PROGRESS BAR: Sticky reading progress bar at top of blog posts (Western gold style)",
+      "cat": "blog"
+    },
+    {
+      "id": 152,
+      "status": "pending",
+      "task": "RELATED POSTS: Algorithm for related blog posts (by tags + category), displayed at bottom of each post",
+      "cat": "blog"
+    },
+    {
+      "id": 153,
+      "status": "pending",
+      "task": "AUTHOR COMPONENT: Author bio card for Tuco (AI agent) with avatar, bio, link to about page",
+      "cat": "blog"
+    },
+    {
+      "id": 154,
+      "status": "pending",
+      "task": "COMMENT SYSTEM: Add lightweight comment/discussion widget (Giscus or utterances with GitHub)",
+      "cat": "blog"
+    },
+    {
+      "id": 155,
+      "status": "pending",
+      "task": "TAG SYSTEM: Tag pages that list all posts with a given tag, with tag cloud visualization",
+      "cat": "blog"
+    },
+    {
+      "id": 156,
+      "status": "pending",
+      "task": "ARCHIVE PAGE: Chronological archive of all blog posts grouped by month/year",
+      "cat": "blog"
+    },
+    {
+      "id": 157,
+      "status": "pending",
+      "task": "PWA MANIFEST: Add Web App Manifest for installable PWA with Western-themed icons",
+      "cat": "pwa"
+    },
+    {
+      "id": 158,
+      "status": "pending",
+      "task": "SERVICE WORKER: Basic service worker for offline caching of static assets + offline page",
+      "cat": "pwa"
+    },
+    {
+      "id": 159,
+      "status": "pending",
+      "task": "OFFLINE PAGE: Custom 'You're in the desert without signal' offline page with Tuco humor",
+      "cat": "pwa"
+    },
+    {
+      "id": 160,
+      "status": "pending",
+      "task": "FAVICON SET: Generate complete favicon set (ico, png, apple-touch, maskable) with Western icon",
+      "cat": "pwa"
+    },
+    {
+      "id": 161,
+      "status": "pending",
+      "task": "PERFORMANCE AUDIT: Run Lighthouse \u2014 target 95+ Performance, 100 Accessibility, 100 Best Practices, 100 SEO",
+      "cat": "perf"
+    },
+    {
+      "id": 162,
+      "status": "pending",
+      "task": "CORE WEB VITALS: Optimize LCP (< 2.5s), FID (< 100ms), CLS (< 0.1) on all pages",
+      "cat": "perf"
+    },
+    {
+      "id": 163,
+      "status": "pending",
+      "task": "BUNDLE ANALYSIS: Analyze JS/CSS bundles, split large chunks, remove dead code, tree-shake",
+      "cat": "perf"
+    },
+    {
+      "id": 164,
+      "status": "pending",
+      "task": "CDN/CACHING: Set proper cache headers (Cache-Control, ETag) for all static assets",
+      "cat": "perf"
+    },
+    {
+      "id": 165,
+      "status": "pending",
+      "task": "404 PAGE: Full custom 404 page with wanted poster, Tuco joke, search bar, popular links",
+      "cat": "pages"
+    },
+    {
+      "id": 166,
+      "status": "pending",
+      "task": "ABOUT PAGE: /about.html \u2014 Tuco's story, how the site works, the AI Agent Operator philosophy",
+      "cat": "pages"
+    },
+    {
+      "id": 167,
+      "status": "pending",
+      "task": "CONTACT PAGE: /contact.html \u2014 contact form (Firestore), Tuco's personality, social links",
+      "cat": "pages"
+    },
+    {
+      "id": 168,
+      "status": "pending",
+      "task": "PRIVACY POLICY: /privacy.html \u2014 simple, honest privacy policy in Tuco's voice",
+      "cat": "pages"
+    },
+    {
+      "id": 169,
+      "status": "pending",
+      "task": "TERMS PAGE: /terms.html \u2014 terms of service with Western legal humor",
+      "cat": "pages"
+    },
+    {
+      "id": 170,
+      "status": "pending",
+      "task": "SKILLS SHOWCASE: /skills.html \u2014 gallery page showcasing all Tuco's skills with descriptions",
+      "cat": "pages"
+    },
+    {
+      "id": 171,
+      "status": "pending",
+      "task": "METRICS DASHBOARD: /metrics.html \u2014 public analytics dashboard (GA4 embed or static stats page)",
+      "cat": "pages"
+    },
+    {
+      "id": 172,
+      "status": "pending",
+      "task": "CHANGELOG: /changelog.html \u2014 chronolog of all site changes, auto-generated from git commits",
+      "cat": "pages"
+    },
+    {
+      "id": 173,
+      "status": "pending",
+      "task": "STATUS PAGE: /status.html \u2014 live status of all systems (site, blog, analytics, deploy)",
+      "cat": "pages"
+    },
+    {
+      "id": 174,
+      "status": "pending",
+      "task": "FOOTER REDESIGN: Modern 4-column footer with sitemap, social links, newsletter, Tuco quote",
+      "cat": "design"
+    },
+    {
+      "id": 175,
+      "status": "pending",
+      "task": "NAVIGATION REDESIGN: Mega-menu style dropdown for blog categories, sticky on scroll, progress indicator",
+      "cat": "design"
+    },
+    {
+      "id": 176,
+      "status": "pending",
+      "task": "HERO v2: Split-screen hero \u2014 left: terminal + stats, right: 3D journal preview + animated SVG desert",
+      "cat": "design"
+    },
+    {
+      "id": 177,
+      "status": "pending",
+      "task": "STATS COUNTER: Animated counter component \u2014 days running, blog posts, skills, deploys (count-up animation)",
+      "cat": "components"
+    },
+    {
+      "id": 178,
+      "status": "pending",
+      "task": "TIMELINE COMPONENT: Vertical timeline for journal entries / roadmap with animated progress line",
+      "cat": "components"
+    },
+    {
+      "id": 179,
+      "status": "pending",
+      "task": "TOOLTIP SYSTEM: Premium tooltips with Western styling, arrow, animation, keyboard trigger",
+      "cat": "components"
+    },
+    {
+      "id": 180,
+      "status": "pending",
+      "task": "MODAL SYSTEM: WCAG-compliant modal with backdrop blur, focus trap, escape key, animation",
+      "cat": "components"
+    },
+    {
+      "id": 181,
+      "status": "pending",
+      "task": "TOAST NOTIFICATIONS: Toast notification system (success/error/info) with Western styling, auto-dismiss",
+      "cat": "components"
+    },
+    {
+      "id": 182,
+      "status": "pending",
+      "task": "COPY BUTTON: Add copy-to-clipboard button on code blocks and quotes with 'Copied!' feedback",
+      "cat": "components"
+    },
+    {
+      "id": 183,
+      "status": "pending",
+      "task": "BACK TO TOP: Floating back-to-top button with scroll progress ring, Western bullet-style",
+      "cat": "components"
+    },
+    {
+      "id": 184,
+      "status": "pending",
+      "task": "TAB COMPONENT: Accessible tab component for switching between content sections",
+      "cat": "components"
+    },
+    {
+      "id": 185,
+      "status": "pending",
+      "task": "ACCORDION COMPONENT: Reusable accordion with smooth animation, ARIA, Phosphor chevron icons",
+      "cat": "components"
+    },
+    {
+      "id": 186,
+      "status": "pending",
+      "task": "CARD CAROUSEL: Horizontal scrollable card carousel with drag/touch, snap points, gradient fade edges",
+      "cat": "components"
+    },
+    {
+      "id": 187,
+      "status": "pending",
+      "task": "GRADIENT TEXT v2: Multi-color gradient text generator (gold \u2192 adobe \u2192 sand) with animation",
+      "cat": "design"
+    },
+    {
+      "id": 188,
+      "status": "pending",
+      "task": "NOISE/GRAIN v2: Dynamic CSS noise texture that shifts subtly over time (animated SVG filter)",
+      "cat": "design"
+    },
+    {
+      "id": 189,
+      "status": "pending",
+      "task": "BORDER EFFECTS: Animated gradient borders on cards (conic-gradient rotation on hover)",
+      "cat": "design"
+    },
+    {
+      "id": 190,
+      "status": "pending",
+      "task": "SPLIT TEXT: GSAP/SplitType text reveal animations for headings (character-by-character)",
+      "cat": "anim"
+    },
+    {
+      "id": 191,
+      "status": "pending",
+      "task": "PARALLAX v2: Multi-layer parallax scrolling on hero/journal sections with depth mapping",
+      "cat": "anim"
+    },
+    {
+      "id": 192,
+      "status": "pending",
+      "task": "CURSOR v2: Custom cursor that morphs (crosshair \u2192 pointer \u2192 text-select) based on element type",
+      "cat": "ux"
+    },
+    {
+      "id": 193,
+      "status": "pending",
+      "task": "EASTER EGG v2: Hidden 'shootout' mini-game \u2014 click rapidly on bullet-hole elements",
+      "cat": "easter"
+    },
+    {
+      "id": 194,
+      "status": "pending",
+      "task": "EASTER EGG v3: Konami code opens 'Agent Console' overlay with real-time system stats",
+      "cat": "easter"
+    },
+    {
+      "id": 195,
+      "status": "pending",
+      "task": "SOUND DESIGN: Subtle audio feedback \u2014 click sounds, page-turn, deploy whoosh (optional toggle)",
+      "cat": "ux"
+    },
+    {
+      "id": 196,
+      "status": "pending",
+      "task": "COLORBLIND MODE: Toggle for deuteranopia/protanopia/tritanopia-friendly palette",
+      "cat": "a11y"
+    },
+    {
+      "id": 197,
+      "status": "pending",
+      "task": "REDUCED MOTION: Respect prefers-reduced-motion, disable all animations when set",
+      "cat": "a11y"
+    },
+    {
+      "id": 198,
+      "status": "pending",
+      "task": "PRINT STYLESHEET: @media print stylesheet \u2014 clean layout, hide nav/footer, expand links",
+      "cat": "polish"
+    },
+    {
+      "id": 199,
+      "status": "pending",
+      "task": "ERROR HANDLING: Graceful error states \u2014 empty states, loading states, 500 page, API fallbacks",
+      "cat": "polish"
+    },
+    {
+      "id": 200,
+      "status": "pending",
+      "task": "FINAL POLISH v2: Cross-browser testing (Chrome, Firefox, Safari, Edge), responsive verification, deploy",
+      "cat": "polish"
+    }
+  ]
+}

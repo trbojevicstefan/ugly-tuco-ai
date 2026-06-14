@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         journal: resolve(__dirname, 'journal.html'),
+        blog: resolve(__dirname, 'blog.html'),
+        'posts/manifesto': resolve(__dirname, 'posts/manifesto.html'),
       },
     },
   },
