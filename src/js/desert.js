@@ -209,6 +209,45 @@
   });
 })();
 
+// ── Mobile Menu Toggle ──
+(function initMobileMenu() {
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  if (!toggle || !overlay) return;
+
+  function openMenu() {
+    document.body.classList.add('mobile-menu-open');
+  }
+  function closeMenu() {
+    document.body.classList.remove('mobile-menu-open');
+  }
+
+  toggle.addEventListener('click', function() {
+    if (document.body.classList.contains('mobile-menu-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close menu when overlay clicked
+  overlay.addEventListener('click', closeMenu);
+
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.mobile-nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      setTimeout(closeMenu, 200);
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+      closeMenu();
+    }
+  });
+})();
+
 // ── Gold Dust Particles ──
 (function initGoldDust() {
   const hero = document.getElementById('hero-desert');
