@@ -21,6 +21,20 @@
   <link rel="stylesheet" href="/src/css/western-v2.css">
 </head>
 <body>
+  <!-- Dust particles -->
+  <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;overflow:hidden">
+    <div class="dust-particle" style="top:15%;left:10%;--dx:80px;--dy:-60px;--dur:5s;--delay:0s"></div>
+    <div class="dust-particle" style="top:25%;left:30%;--dx:120px;--dy:-40px;--dur:4s;--delay:1s"></div>
+    <div class="dust-particle" style="top:40%;left:55%;--dx:90px;--dy:-70px;--dur:6s;--delay:2s"></div>
+    <div class="dust-particle" style="top:60%;left:70%;--dx:150px;--dy:-50px;--dur:4.5s;--delay:0.5s"></div>
+    <div class="dust-particle" style="top:20%;left:80%;--dx:100px;--dy:-80px;--dur:5.5s;--delay:3s"></div>
+  </div>
+  <!-- Tumbleweed -->
+  <div class="tumbleweed" aria-hidden="true">🌾</div>
+  <!-- Horseback silhouette -->
+  <div class="horseback-silhouette" aria-hidden="true">🐎</div>
+  <!-- Sepia wash -->
+  <div class="sepia-wash" id="sepia-wash"></div>
   <!-- Loading Screen -->
   <div class="loading-screen" id="loading-screen">
     <div class="loading-tumbleweed">
@@ -733,5 +747,6 @@
 </script>
 <script src="/src/js/frontier.js"></script>
 <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+<script>window.addEventListener("scroll",function(){var s=document.getElementById("sepia-wash");s</body></body>(window.scrollY>200?s.classList.add("active"):s.classList.remove("active"))})</script>
 </body>
 </html>
