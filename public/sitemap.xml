@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/blog.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/journal.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/arsenal.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/manifesto.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/built-in-3-hours.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/western-ui-grit.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/404.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/about.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/arsenal.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/changelog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/contact.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/index_old_backup.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/inventory.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/journal.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/metrics.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/built-in-3-hours.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/economics.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/manifesto.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/western-ui-grit.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/posts/zero-to-deploy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/privacy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/skills.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/spaghetti-western-v1.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/status.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ugly-tuco--n8nauts.us-central1.hosted.app/terms.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
