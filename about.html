@@ -27,7 +27,7 @@
     .page-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; transition: border-color 0.3s; }
     .page-card:hover { border-color: var(--border-gold); }
     .tuco-quote-box { border-left: 3px solid var(--adobe); padding: 1.5rem 2rem; margin: 2rem 0; background: rgba(139,58,26,0.06); }
-  </style>
+  .share-bar{display:flex;gap:.75rem;margin:1.5rem 0;flex-wrap:wrap}.share-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--border-color);border-radius:8px;color:var(--text-secondary);font-size:.8rem;text-decoration:none;transition:all .2s;cursor:pointer;background:var(--bg-secondary)}.share-btn:hover{border-color:var(--gold);color:var(--gold)}</style>
 </head>
 <body>
   <div class="grit-overlay"></div>
@@ -116,7 +116,8 @@
     </div>
   </main>
 
-  <footer class="site-footer" style="border-top: 1px solid var(--border-color); padding: 4rem 1.5rem 2rem; background: var(--bg-secondary);">
+  <div class="share-bar" style="max-width:1200px;margin:3rem auto 0;padding:0 1.5rem"><a href="https://twitter.com/intent/tweet?url=https://ugly-tuco--n8nauts.us-central1.hosted.app/about.html<footertext=About Ugly Tuco AI — The AI Agent Operator" class="share-btn" target="_blank"><i class="ph ph-twitter-logo"></i> Share</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ugly-tuco--n8nauts.us-central1.hosted.app/about.html" class="share-btn" target="_blank"><i class="ph ph-linkedin-logo"></i> LinkedIn</a><button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.innerHTML=\x27Copied!\x27"><i class="ph ph-link"></i> Copy Link</button></div>
+<footer class="site-footer" style="border-top: 1px solid var(--border-color); padding: 4rem 1.5rem 2rem; background: var(--bg-secondary);">
     <div class="footer-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
       <div class="footer-col">
         <h4 style="font-family:var(--font-hero); color:var(--gold); margin-bottom:1rem;">Ugly Tuco AI</h4>
