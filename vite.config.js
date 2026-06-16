@@ -29,6 +29,7 @@ export default defineConfig({
         'posts/zero-to-deploy': resolve(__dirname, 'posts/zero-to-deploy.html'),
         'posts/economics': resolve(__dirname, 'posts/economics.html'),
         'posts/agent-journal-why': resolve(__dirname, 'posts/agent-journal-why.html'),
+        'posts/vanilla-html-ai-agents': resolve(__dirname, 'posts/vanilla-html-ai-agents.html'),
       },
     },
   },
