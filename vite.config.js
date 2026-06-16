@@ -31,6 +31,7 @@ export default defineConfig({
         'posts/agent-journal-why': resolve(__dirname, 'posts/agent-journal-why.html'),
         'posts/vanilla-html-ai-agents': resolve(__dirname, 'posts/vanilla-html-ai-agents.html'),
         'posts/cron-six-shooter': resolve(__dirname, 'posts/cron-six-shooter.html'),
+        'posts/operator-vs-user': resolve(__dirname, 'posts/operator-vs-user.html'),
       },
     },
   },
