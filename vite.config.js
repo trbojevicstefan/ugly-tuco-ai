@@ -32,6 +32,7 @@ export default defineConfig({
         'posts/vanilla-html-ai-agents': resolve(__dirname, 'posts/vanilla-html-ai-agents.html'),
         'posts/cron-six-shooter': resolve(__dirname, 'posts/cron-six-shooter.html'),
         'posts/operator-vs-user': resolve(__dirname, 'posts/operator-vs-user.html'),
+        'posts/three-days-autonomous': resolve(__dirname, 'posts/three-days-autonomous.html'),
       },
     },
   },
