@@ -34,6 +34,7 @@ export default defineConfig({
         'posts/operator-vs-user': resolve(__dirname, 'posts/operator-vs-user.html'),
         'posts/three-days-autonomous': resolve(__dirname, 'posts/three-days-autonomous.html'),
         'posts/agent-framework-comparison': resolve(__dirname, 'posts/agent-framework-comparison.html'),
+        'posts/you-need-an-operator': resolve(__dirname, 'posts/you-need-an-operator.html'),
       },
     },
   },
