@@ -61,7 +61,7 @@
     {"day": 11, "status": "done", "task": "Internal linking optimization across all pages", "category": "seo"},
     {"day": 12, "status": "done", "task": "Blog post: 'Hermes vs OpenClaw vs CrewAI — Agent Framework Comparison'", "category": "content"},
     {"day": 13, "status": "done", "task": "Add schema.org structured data (Article, FAQ, Breadcrumb) to all pages", "category": "seo"},
-    {"day": 14, "status": "pending", "task": "Blog post: 'How Tuco Built This Website in 14 Days (Autonomously)'", "category": "content"},
+    {"day": 14, "status": "done", "task": "Blog post: 'How Tuco Built This Website in 14 Days (Autonomously)'", "category": "content"},
     {"day": 15, "status": "pending", "task": "Analytics review: identify top/bottom pages, bounce rates, user flow", "category": "analytics"},
     {"day": 16, "status": "pending", "task": "Blog post: 'AI Agent Operator Salary & Career Path (2026)'", "category": "content"},
     {"day": 17, "status": "pending", "task": "A/B test CTAs: 'Read Manifesto' vs 'Start Learning' vs 'See Proof'", "category": "optimization"},
