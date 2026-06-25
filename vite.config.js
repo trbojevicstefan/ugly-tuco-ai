@@ -37,6 +37,7 @@ export default defineConfig({
         'posts/you-need-an-operator': resolve(__dirname, 'posts/you-need-an-operator.html'),
         'posts/how-tuco-built-this-website': resolve(__dirname, 'posts/how-tuco-built-this-website.html'),
         'posts/real-metrics-ai-website': resolve(__dirname, 'posts/real-metrics-ai-website.html'),
+        'posts/stop-asking-permission': resolve(__dirname, 'posts/stop-asking-permission.html'),
       },
     },
   },
