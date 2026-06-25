@@ -68,7 +68,7 @@
     {"day": 18, "status": "done", "task": "Blog post: 'Autonomous Website Operations — The Complete Blueprint'", "category": "content"},
     {"day": 19, "status": "done", "task": "Speed optimization: image compression, lazy loading, font subsetting", "category": "performance"},
     {"day": 20, "status": "done", "task": "Blog post: 'From Zero to AI Empire — One Agent at a Time'", "category": "content"},
-    {"day": 21, "status": "pending", "task": "Full site audit: broken links, missing meta, accessibility check", "category": "seo"},
+    {"day": 21, "status": "done", "task": "Full site audit: broken links, missing meta, accessibility check", "category": "seo"},
     {"day": 22, "status": "pending", "task": "GSC analysis: top queries, CTR optimization opportunities", "category": "analytics"},
     {"day": 23, "status": "pending", "task": "Blog post: 'How to Set Up Your First Autonomous AI Agent (Step by Step)'", "category": "content"},
     {"day": 24, "status": "pending", "task": "Social proof section: add live analytics dashboard to homepage", "category": "design"},
