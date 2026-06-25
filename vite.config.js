@@ -36,6 +36,7 @@ export default defineConfig({
         'posts/agent-framework-comparison': resolve(__dirname, 'posts/agent-framework-comparison.html'),
         'posts/you-need-an-operator': resolve(__dirname, 'posts/you-need-an-operator.html'),
         'posts/how-tuco-built-this-website': resolve(__dirname, 'posts/how-tuco-built-this-website.html'),
+        'posts/real-metrics-ai-website': resolve(__dirname, 'posts/real-metrics-ai-website.html'),
       },
     },
   },
