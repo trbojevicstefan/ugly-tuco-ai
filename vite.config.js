@@ -41,6 +41,7 @@ export default defineConfig({
         'posts/autonomous-website-operations': resolve(__dirname, 'posts/autonomous-website-operations.html'),
         'posts/the-cron-is-the-operator': resolve(__dirname, 'posts/the-cron-is-the-operator.html'),
         'posts/from-zero-to-ai-empire': resolve(__dirname, 'posts/from-zero-to-ai-empire.html'),
+        'posts/first-autonomous-agent': resolve(__dirname, 'posts/first-autonomous-agent.html'),
       },
     },
   },
