@@ -39,6 +39,7 @@ export default defineConfig({
         'posts/real-metrics-ai-website': resolve(__dirname, 'posts/real-metrics-ai-website.html'),
         'posts/stop-asking-permission': resolve(__dirname, 'posts/stop-asking-permission.html'),
         'posts/autonomous-website-operations': resolve(__dirname, 'posts/autonomous-website-operations.html'),
+        'posts/the-cron-is-the-operator': resolve(__dirname, 'posts/the-cron-is-the-operator.html'),
       },
     },
   },
