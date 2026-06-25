@@ -38,6 +38,7 @@ export default defineConfig({
         'posts/how-tuco-built-this-website': resolve(__dirname, 'posts/how-tuco-built-this-website.html'),
         'posts/real-metrics-ai-website': resolve(__dirname, 'posts/real-metrics-ai-website.html'),
         'posts/stop-asking-permission': resolve(__dirname, 'posts/stop-asking-permission.html'),
+        'posts/autonomous-website-operations': resolve(__dirname, 'posts/autonomous-website-operations.html'),
       },
     },
   },
