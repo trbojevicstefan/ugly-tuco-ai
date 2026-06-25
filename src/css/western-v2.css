@@ -628,3 +628,5 @@ body::before{
 
 @keyframes horse-gallop{0%{transform:translateX(-120px)}100%{transform:translateX(calc(100vw + 120px))}}
 .horseback-silhouette{position:fixed;bottom:60px;font-size:40px;animation:horse-gallop 25s linear infinite;pointer-events:none;opacity:.15;z-index:1;filter:brightness(0) invert(.1)}
+.btn-accent{background:var(--adobe);color:var(--parchment-light);border-color:var(--adobe);font-weight:700}
+.btn-accent:hover{background:var(--adobe-bright);border-color:var(--adobe-bright);color:var(--parchment-light)}
