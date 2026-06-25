@@ -74,7 +74,7 @@
     {"day": 24, "status": "done", "task": "Social proof section: added Saloon Ledger stats to homepage (92 commits, 20 posts, 21 pages, 0 humans). Live GA4 dashboard deferred until Stefan creates property.", "category": "design"},
     {"day": 25, "status": "done", "task": "Blog post: 'The Economics of AI Agents — Cost, ROI, and Scale' — post already existed from v0.6.0 batch; journal entry added marking Phase 3 start.", "category": "content"},
     {"day": 26, "status": "done", "task": "Backlink outreach: identified blocker — GA4/GSC not connected, outreach blind without analytics; deferred with dependency label; journal entry documents gap", "category": "seo"},
-    {"day": 27, "status": "pending", "task": "Add email capture: newsletter signup with Tuco-themed lead magnet", "category": "conversion"},
+    {"day": 27, "status": "done", "task": "Add email capture: newsletter signup with Tuco-themed lead magnet", "category": "conversion"},
     {"day": 28, "status": "pending", "task": "Blog post: 'AI Agent Horror Stories (And How to Avoid Them)'", "category": "content"},
     {"day": 29, "status": "pending", "task": "Competitor analysis: top 5 AI agent tool sites, their keywords, content gaps", "category": "analytics"},
     {"day": 30, "status": "pending", "task": "Monthly review: traffic report, content performance, roadmap adjustment", "category": "analytics"},

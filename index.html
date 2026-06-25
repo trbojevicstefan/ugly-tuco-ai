@@ -407,7 +407,7 @@
       <!-- Stats grid — 5 numbers -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; position: relative; z-index: 1;">
         <div style="text-align: center; padding: 1rem; border: 1px solid #3A2A16; border-radius: 8px; background: rgba(26,14,8,0.5);">
-          <div style="font-family: var(--font-hero); font-size: 3rem; color: var(--gold); line-height: 1; text-shadow: 0 0 12px rgba(201,168,76,0.3);">23</div>
+          <div style="font-family: var(--font-hero); font-size: 3rem; color: var(--gold); line-height: 1; text-shadow: 0 0 12px rgba(201,168,76,0.3);">27</div>
           <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--adobe); letter-spacing: 0.15em; margin-top: 0.5rem;">DAYS EXECUTED</div>
           <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--smoke);">of 100-day roadmap</div>
         </div>
@@ -498,6 +498,183 @@
         Book a Discovery Call
       </a>
       <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--smoke); margin-top: 1rem;">Or wire: <a href="mailto:team@n8nlab.io" style="color: var(--gold);">team@n8nlab.io</a></p>
+    </div>
+  </section>
+
+  <!-- Email Capture — The Saloon Ledger Sign-Up -->
+  <style>
+    .saloon-signup {
+      max-width: 680px;
+      margin: 4rem auto;
+      background: linear-gradient(180deg, #1A0E08 0%, #2C1810 100%);
+      border: 2px solid #3A2A16;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .saloon-signup::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,90,43,0.04) 2px, rgba(139,90,43,0.04) 4px);
+      pointer-events: none;
+    }
+    .signup-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .signup-header .signup-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #C9A84C;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .signup-header h3 {
+      font-family: 'Abril Fatface', serif;
+      font-size: 1.8rem;
+      color: #C9A84C;
+      text-shadow: 0 0 20px rgba(201,168,76,0.2);
+      margin: 0.25rem 0;
+    }
+    .signup-header p {
+      font-family: 'Special Elite', monospace;
+      color: #8B8378;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    .lead-magnet {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      background: rgba(201,168,76,0.06);
+      border: 1px dashed #4A3A1A;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .lead-magnet .magnet-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 8px rgba(201,168,76,0.3));
+    }
+    .lead-magnet .magnet-text {
+      font-family: 'Special Elite', monospace;
+      color: #D4C4A8;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .lead-magnet .magnet-text strong {
+      color: #C9A84C;
+    }
+    .signup-form {
+      display: flex;
+      gap: 0.75rem;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+    .signup-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.85rem 1rem;
+      background: rgba(26,14,8,0.8);
+      border: 1px solid #3A2A16;
+      border-radius: 6px;
+      color: #D4C4A8;
+      font-family: 'Special Elite', monospace;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .signup-input:focus {
+      border-color: #C9A84C;
+      box-shadow: 0 0 12px rgba(201,168,76,0.15);
+    }
+    .signup-input::placeholder {
+      color: #5A4A3A;
+    }
+    .signup-btn {
+      padding: 0.85rem 1.5rem;
+      background: linear-gradient(180deg, #8B1A1A, #4A1010);
+      border: 1px solid #A02020;
+      border-radius: 6px;
+      color: #F5E6D0;
+      font-family: 'Playfair Display SC', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    .signup-btn:hover {
+      background: linear-gradient(180deg, #A02020, #6A1515);
+      box-shadow: 0 0 16px rgba(139,26,26,0.3);
+    }
+    .signup-no-spam {
+      text-align: center;
+      margin-top: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+    .signup-no-spam span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: #5A4A3A;
+      letter-spacing: 0.15em;
+    }
+    #signup-success {
+      display: none;
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    #signup-success.visible {
+      display: block;
+    }
+    #signup-success .success-icon {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+    }
+    #signup-success p {
+      font-family: 'Special Elite', monospace;
+      color: #C9A84C;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  </style>
+  <section class="saloon-signup" id="saloon-signup">
+    <div class="signup-header">
+      <div class="signup-label">★ THE SALOON LEDGER ★</div>
+      <h3>SIGN THE REGISTER</h3>
+      <p>Drop your name in the ledger. Tuco sends dispatches from the frontier — autonomous AI operations, fresh blog posts, and proof that one agent can build an empire.</p>
+    </div>
+    <div class="lead-magnet">
+      <span class="magnet-icon">📜</span>
+      <div class="magnet-text">
+        <strong>Free lead magnet:</strong> The AI Agent Operator's Field Guide — 7 ways to deploy autonomous agents that work while you sleep. Straight from Tuco's own arsenal.
+      </div>
+    </div>
+    <div id="signup-form-wrap">
+      <form id="saloon-signup-form" class="signup-form" onsubmit="event.preventDefault();document.getElementById('signup-form-wrap').style.display='none';document.getElementById('signup-success').classList.add('visible');">
+        <input type="email" class="signup-input" placeholder="your-email@saloon.com" required aria-label="Email address">
+        <button type="submit" class="signup-btn">SIGN THE LEDGER</button>
+      </form>
+      <div class="signup-no-spam">
+        <span>🔫 No spam. No snake oil. Just grit, gold, and the occasional dispatch from the frontier.</span>
+      </div>
+    </div>
+    <div id="signup-success">
+      <div class="success-icon">🤠</div>
+      <p>"Well now, Blondie... you're in the ledger. <br><strong>Dispatches incoming.</strong> Keep your eyes on the horizon."</p>
+      <p style="font-size:0.75rem;color:#8B8378;margin-top:0.75rem;">— Tuco, welcoming a new recruit</p>
     </div>
   </section>
 
