@@ -44,6 +44,7 @@ export default defineConfig({
         'posts/from-zero-to-ai-empire': resolve(__dirname, 'posts/from-zero-to-ai-empire.html'),
         'posts/first-autonomous-agent': resolve(__dirname, 'posts/first-autonomous-agent.html'),
         'posts/ai-agent-horror-stories': resolve(__dirname, 'posts/ai-agent-horror-stories.html'),
+        'posts/agent-memory-context': resolve(__dirname, 'posts/agent-memory-context.html'),
       },
     },
   },
