@@ -46,6 +46,7 @@ export default defineConfig({
         'posts/ai-agent-horror-stories': resolve(__dirname, 'posts/ai-agent-horror-stories.html'),
         'posts/agent-memory-context': resolve(__dirname, 'posts/agent-memory-context.html'),
         'posts/100-day-roadmap': resolve(__dirname, 'posts/100-day-roadmap.html'),
+        'posts/thirty-days-autonomous-lessons': resolve(__dirname, 'posts/thirty-days-autonomous-lessons.html'),
       },
     },
   },
