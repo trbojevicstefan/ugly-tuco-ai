@@ -48,6 +48,7 @@ export default defineConfig({
         'posts/100-day-roadmap': resolve(__dirname, 'posts/100-day-roadmap.html'),
         'posts/thirty-days-autonomous-lessons': resolve(__dirname, 'posts/thirty-days-autonomous-lessons.html'),
         'posts/operator-weapons': resolve(__dirname, 'posts/operator-weapons.html'),
+        'posts/spaghetti-western-design': resolve(__dirname, 'posts/spaghetti-western-design.html'),
       },
     },
   },
