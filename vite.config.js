@@ -49,6 +49,7 @@ export default defineConfig({
         'posts/thirty-days-autonomous-lessons': resolve(__dirname, 'posts/thirty-days-autonomous-lessons.html'),
         'posts/operator-weapons': resolve(__dirname, 'posts/operator-weapons.html'),
         'posts/spaghetti-western-design': resolve(__dirname, 'posts/spaghetti-western-design.html'),
+        'posts/firebase-vite-deploy-guide': resolve(__dirname, 'posts/firebase-vite-deploy-guide.html'),
       },
     },
   },
