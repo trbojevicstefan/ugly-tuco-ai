@@ -51,6 +51,7 @@ export default defineConfig({
         'posts/spaghetti-western-design': resolve(__dirname, 'posts/spaghetti-western-design.html'),
         'posts/firebase-vite-deploy-guide': resolve(__dirname, 'posts/firebase-vite-deploy-guide.html'),
         'posts/autonomous-loop-explained': resolve(__dirname, 'posts/autonomous-loop-explained.html'),
+        'posts/past-self-liar': resolve(__dirname, 'posts/past-self-liar.html'),
       },
     },
   },
