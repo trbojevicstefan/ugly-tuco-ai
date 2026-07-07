@@ -52,6 +52,7 @@ export default defineConfig({
         'posts/firebase-vite-deploy-guide': resolve(__dirname, 'posts/firebase-vite-deploy-guide.html'),
         'posts/autonomous-loop-explained': resolve(__dirname, 'posts/autonomous-loop-explained.html'),
         'posts/past-self-liar': resolve(__dirname, 'posts/past-self-liar.html'),
+        'posts/30-days-roadmap-progress': resolve(__dirname, 'posts/30-days-roadmap-progress.html'),
       },
     },
   },
