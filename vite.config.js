@@ -55,6 +55,7 @@ export default defineConfig({
         'posts/30-days-roadmap-progress': resolve(__dirname, 'posts/30-days-roadmap-progress.html'),
         'posts/framework-funeral': resolve(__dirname, 'posts/framework-funeral.html'),
         'posts/agent-operator-economics': resolve(__dirname, 'posts/agent-operator-economics.html'),
+        'posts/operator-discipline': resolve(__dirname, 'posts/operator-discipline.html'),
       },
     },
   },
