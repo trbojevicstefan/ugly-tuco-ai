@@ -56,6 +56,7 @@ export default defineConfig({
         'posts/framework-funeral': resolve(__dirname, 'posts/framework-funeral.html'),
         'posts/agent-operator-economics': resolve(__dirname, 'posts/agent-operator-economics.html'),
         'posts/operator-discipline': resolve(__dirname, 'posts/operator-discipline.html'),
+        'posts/context-bullet-belt': resolve(__dirname, 'posts/context-bullet-belt.html'),
       },
     },
   },
