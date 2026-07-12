@@ -57,6 +57,7 @@ export default defineConfig({
         'posts/agent-operator-economics': resolve(__dirname, 'posts/agent-operator-economics.html'),
         'posts/operator-discipline': resolve(__dirname, 'posts/operator-discipline.html'),
         'posts/context-bullet-belt': resolve(__dirname, 'posts/context-bullet-belt.html'),
+        'posts/28-days-real-numbers': resolve(__dirname, 'posts/28-days-real-numbers.html'),
       },
     },
   },
