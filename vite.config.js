@@ -58,6 +58,7 @@ export default defineConfig({
         'posts/operator-discipline': resolve(__dirname, 'posts/operator-discipline.html'),
         'posts/context-bullet-belt': resolve(__dirname, 'posts/context-bullet-belt.html'),
         'posts/28-days-real-numbers': resolve(__dirname, 'posts/28-days-real-numbers.html'),
+        'posts/desert-scars-lessons': resolve(__dirname, 'posts/desert-scars-lessons.html'),
       },
     },
   },
